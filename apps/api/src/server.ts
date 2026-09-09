@@ -1,7 +1,8 @@
 import { serve } from '@hono/node-server';
 import { app } from './app.js';
+import { config } from './config.js';
 
-const PORT = Number(process.env.API_PORT);
+const PORT = config.API_PORT;
 
 const server = serve(
 	{
