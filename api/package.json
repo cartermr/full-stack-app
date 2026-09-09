@@ -1,13 +1,13 @@
 {
-  "name": "@fstack/api",
+  "name": "@repo/api",
   "type": "module",
+  "module": "server.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch --env-file=../.env src/server.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/server.js"
   },
   "dependencies": {
-    "@fstack/packages": "workspace:*",
     "@hono/node-server": "^2.1.1",
     "hono": "^4.13.7"
   },
