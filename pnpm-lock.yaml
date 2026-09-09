@@ -18,7 +18,7 @@ importers:
         specifier: ^2.5.12
         version: 2.5.12
 
-  api:
+  apps/api:
     dependencies:
       '@hono/node-server':
         specifier: ^2.1.1
