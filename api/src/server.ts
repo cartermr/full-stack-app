@@ -4,27 +4,27 @@ import { app } from './app.js';
 const PORT = Number(process.env.API_PORT);
 
 const server = serve(
-  {
-    fetch: app.fetch,
-    port: PORT,
-  },
-  (info) => {
-    console.log(`Server is running on http://localhost:${info.port}`);
-  },
+	{
+		fetch: app.fetch,
+		port: PORT,
+	},
+	(info) => {
+		console.log(`Server is running on http://localhost:${info.port}`);
+	},
 );
 
 process.on('SIGINT', () => {
-  server.close();
-  process.exit(0);
+	server.close();
+	process.exit(0);
 });
 
 process.on('SIGTERM', () => {
-  server.close((error) => {
-    if (error) {
-      console.error(error);
-      process.exit(1);
-    } else {
-      process.exit(0);
-    }
-  });
+	server.close((error) => {
+		if (error) {
+			console.error(error);
+			process.exit(1);
+		} else {
+			process.exit(0);
+		}
+	});
 });

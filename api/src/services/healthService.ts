@@ -1,3 +1,3 @@
 export const apiHealth = () => ({
-  API_HEALTH: 'OK',
+	API_HEALTH: 'OK',
 });
